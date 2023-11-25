@@ -10,7 +10,7 @@ def index(request):
 def detail(request, pk):
     article = Article.objects.get(pk=pk)
     comment_form = CommentForm()
-    commnets = article.comment_set.all()
+    commnets = article.comment.all()
     context = {
         'article' : article,
         'comment_form' : comment_form,
@@ -53,6 +53,11 @@ def delete(request, pk):
         return redirect('articles:index')
     else:
         return redirect('articles:detail', article.pk)
+    
+def alldelete(request):
+    article = Article.objects.all()
+    article.delete()
+    return redirect('articles:index')
     
 def comments_create(request, pk):
     article = Article.objects.get(pk=pk)
