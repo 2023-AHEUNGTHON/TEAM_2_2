@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="write.css">
+    <link rel="stylesheet" type=" text/css" href="style.css">
+    <title>man-do!</title>
+</head>
+<body>
+    <form id="myForm" action="/url/" method="POST">
+    <div class="display-container">
+        <div class="background-image"><img src="page.png" alt="배경"></div>
+        <p>나의 목표</p>
+        <div class="memo" id="memoContainer">
+        <input type="text" id="memoTitle" placeholder="제목을 입력하세요">
+        <textarea spellcheck="false" id="memoText" placeholder="나의 목표 "></textarea>
+        <input type="file" id="uploadInput" accept="image/*" style="display: none;">
+        
+        <div class="img-preview"><img src="upload.png" id="uploadTrigger" alt="이미지"></div>
+  
+
+    </div>
+   
+    <!--추후 submit로 변경, sanveAndSend()-->
+        <button type="button" onclick="goMando(); ">만두 빚기 </button>
+    </div>
+</form>
+
+    <script src="write.js"></script>
+
+</body>
+</html>
